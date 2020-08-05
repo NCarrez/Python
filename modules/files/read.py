@@ -6,7 +6,7 @@ if( not (file_path in sys.path)):
     
 
 from load import load
-from my_modules.encryption import uncrypt    
+from encryption import uncrypt    
 
 
 def read(full_file_name):    

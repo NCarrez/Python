@@ -4,8 +4,8 @@ file_path = os.path.dirname(os.path.abspath(__file__))
 if( not (file_path in sys.path)):
     sys.path.append(file_path)
 
-from my_modules.files import read
-from my_modules.accounts import from_buffer
+from files import read
+from accounts import from_buffer
 import paths
 
 

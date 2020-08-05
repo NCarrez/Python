@@ -2,3 +2,12 @@
 /admin.enc
 /datas
 /perso_python.code-workspace
+
+/modules/accounts/__pycache__
+/modules/applications_skeleton/__pycache__
+/modules/encryption/__pycache__
+/modules/files/__pycache__
+/modules/security/__pycache__
+
+/projects/master_login/sources/__pycache__
+/projects/master_manager/sources/__pycache__

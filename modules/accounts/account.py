@@ -5,8 +5,8 @@ if( not (file_path in sys.path)):
     sys.path.append(file_path)
 
 from keys import master_app_key
-from my_modules.encryption import cryption
-import my_modules.security as security
+from encryption import cryption
+import security 
 
 
 class account():

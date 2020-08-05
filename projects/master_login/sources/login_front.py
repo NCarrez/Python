@@ -12,7 +12,7 @@ from PySide2.QtWidgets import QVBoxLayout
 from PySide2.QtWidgets import QLineEdit, QPushButton, QLabel
 from PySide2.QtWidgets import QAction, QShortcut      
 
-from my_modules.applications_skeleton import my_app
+from applications_skeleton import my_app
 from login_back import check_login
 
 

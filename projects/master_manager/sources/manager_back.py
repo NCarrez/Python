@@ -5,8 +5,8 @@ if( not (file_path in sys.path)):
     sys.path.append(file_path)
 
 import paths
-from my_modules.files.read import read
-from my_modules.accounts import from_buffer
+from files.read import read
+from accounts import from_buffer
 
 admin_file = paths.admin_file_path
 
