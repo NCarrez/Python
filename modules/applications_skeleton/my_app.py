@@ -1,16 +1,16 @@
 import os, sys
 
 file_path = os.path.dirname(os.path.abspath(__file__))
-if( not (file_path in sys.path)):
+if not (file_path in sys.path):
     sys.path.append(file_path)
 
 
-from PySide2.QtGui     import QKeySequence
-from PySide2.QtCore    import Signal, Slot   
+from PySide2.QtGui import QKeySequence
+from PySide2.QtCore import Signal, Slot
 from PySide2.QtWidgets import QApplication, QMainWindow, QWidget
 from PySide2.QtWidgets import QVBoxLayout
 from PySide2.QtWidgets import QLineEdit, QPushButton, QLabel
-from PySide2.QtWidgets import QAction, QShortcut  
+from PySide2.QtWidgets import QAction, QShortcut
 
 
 class my_app(QMainWindow):
@@ -24,19 +24,19 @@ class my_app(QMainWindow):
         exit(-1)
 
     def setup_menubar(self):
-        self.topWidget = QWidget() #MenuBar widget
+        self.topWidget = QWidget()  # MenuBar widget
         self.topWidget.menubar = self.menuBar()
         self.make_menubar(self.topWidget)
         self.topWidget.menubar.show()
         pass
 
     def setup_centralwidget(self):
-        self.centralWidget = QWidget() #Central widget
+        self.centralWidget = QWidget()  # Central widget
         self.make_centralwidget(self.centralWidget)
         self.setCentralWidget(self.centralWidget)
         pass
 
     def setup_shortcuts(self):
-        self.shortcuts = QWidget() #ShortcutsHandler widget
+        self.shortcuts = QWidget()  # ShortcutsHandler widget
         self.make_shortcut(self.shortcuts)
         pass
