@@ -12,6 +12,7 @@ from PySide2.QtWidgets import QVBoxLayout, QHBoxLayout
 from PySide2.QtWidgets import QLineEdit, QPushButton, QLabel
 from PySide2.QtWidgets import QAction, QShortcut    
 
+from keys import encrypted_ma_key
 from applications_skeleton import my_app
 from manager_back import get_admin_account_list
 
@@ -66,7 +67,7 @@ def setup_userWidget(username, password):
 
 
 def build_centralwidget(widget):
-    key = 'gAAAAABfKoR5klbIUV2lzL-Mbpm-UXX1KahLgq6zYMoYTZKeWXGvUkM1cHwjEVc4MfOAdwKgnpyAUbj9Oy7dUa6yrdah0zIY3A==K=D8h44pk7jdNRELgg13lsov2S62oqWQyYoRErefZfyqM='
+    key = encrypted_ma_key
     widget.layout = QVBoxLayout()
     widget.layout.setMargin(10)
 
