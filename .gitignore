@@ -1,6 +1,6 @@
 /.vscode
 /admin.enc
-/datas
+/datas/keys.py
 /perso_python.code-workspace
 
 /modules/accounts/__pycache__
@@ -11,3 +11,6 @@
 
 /projects/master_login/sources/__pycache__
 /projects/master_manager/sources/__pycache__
+datas/__pycache__/authorized.cpython-38.pyc
+datas/__pycache__/keys.cpython-38.pyc
+datas/__pycache__/paths.cpython-38.pyc

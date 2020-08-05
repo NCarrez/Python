@@ -5,7 +5,6 @@ if not (file_path in sys.path):
     sys.path.append(file_path)
 
 
-def save(full_file_name, datas):
-    ofile = open(full_file_name, "w+")
-    ofile.write(datas)
-    ofile.close()
+python_path = os.path.join(file_path, "..")
+admin_file_path = os.path.join(python_path, "admin.enc")
+
