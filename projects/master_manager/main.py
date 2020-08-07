@@ -6,7 +6,7 @@ if not (file_path in sys.path):
 
 
 from PySide2.QtWidgets import QApplication
-from sources.manager_front import ui_mastermanager
+from sources.ui import ui_mastermanager
 
 
 if __name__ == "__main__":
