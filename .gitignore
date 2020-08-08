@@ -1,7 +1,7 @@
 /.vscode/settings.json
+/.vscode/perso_python.code-workspace
 /admin.enc
 /datas/keys.py
-/perso_python.code-workspace
 
 /modules/accounts/__pycache__
 /modules/applications_skeleton/__pycache__
