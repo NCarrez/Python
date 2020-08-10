@@ -52,7 +52,7 @@ def build_adminlistwidget():
     pass
 
 
-def build_admininfowidget():
+def build_adminpanelwidget():
     widget = QFrame()
     widget.setFrameStyle(QFrame.Panel | QFrame.Raised)
     # widget = QWidget()
@@ -105,20 +105,25 @@ def build_adminaddwidget():
 
 
 def build_centralwidget(widget):
-    widget.main_layout = QVBoxLayout()
-    widget.main_gbox = QGroupBox("Admin Manager")
-    widget.layout = QGridLayout()
+    widget.mlayout = QHBoxLayout()
+    widget.gbox = QGroupBox("Admin Manager")
+    widget.mlayout.addWidget(widget.gbox)
+    widget.layout = QHBoxLayout()
 
-    widget.adminlist = build_adminlistwidget()
-    widget.layout.addWidget(widget.adminlist, 0, 0)
-    widget.adminadd = build_adminaddwidget()
-    widget.layout.addWidget(widget.adminadd, 1, 0)
-    widget.admininfo = build_admininfowidget()
-    widget.layout.addWidget(widget.admininfo, 0, 1, 2, 1)
+    widget.lst_layout = QVBoxLayout()
+    widget.layout.admin_list_widget = build_adminlistwidget()
+    widget.lst_layout.addWidget(widget.layout.admin_list_widget)
+    widget.layout.admin_add_widget = build_adminaddwidget()
+    widget.lst_layout.addWidget(widget.layout.admin_add_widget)
+    widget.layout.insertLayout(-1, widget.lst_layout)
 
-    widget.main_gbox.setLayout(widget.layout)
-    widget.main_layout.addWidget(widget.main_gbox)
-    widget.setLayout(widget.main_layout)
+    widget.layout.insertSpacing(-1, 5)
+
+    widget.layout.admin_panel_widget = build_adminpanelwidget()
+    widget.layout.addWidget(widget.layout.admin_panel_widget)
+    widget.gbox.setLayout(widget.layout)
+    widget.setLayout(widget.mlayout)
+    pass
 
 
 class ui_mastermanager(my_app):
