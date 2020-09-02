@@ -19,9 +19,11 @@ class my_app(QMainWindow):
         self.setup_menubar()
         self.setup_centralwidget()
         self.setup_shortcuts()
+        self.setup_connections()
+        self.setup_closeEvent()
 
-    def closeEvent(self, event):
-        exit(-1)
+    def closeEvent(self, event, value):
+        exit(value)
 
     def setup_menubar(self):
         self.topWidget = QWidget()  # MenuBar widget

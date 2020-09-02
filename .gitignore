@@ -3,14 +3,15 @@
 /admin.enc
 /datas/keys.py
 
-/modules/accounts/__pycache__
-/modules/applications_skeleton/__pycache__
-/modules/encryption/__pycache__
-/modules/files/__pycache__
-/modules/security/__pycache__
+/old_modules/accounts/__pycache__
+/old_modules/applications_skeleton/__pycache__
+/old_modules/encryption/__pycache__
+/old_modules/files/__pycache__
+/old_modules/security/__pycache__
 
-/projects/master_login/sources/__pycache__
-/projects/master_manager/sources/__pycache__
-datas/__pycache__/authorized.cpython-38.pyc
-datas/__pycache__/keys.cpython-38.pyc
-datas/__pycache__/paths.cpython-38.pyc
+/old_projects/master_login/sources/__pycache__
+/old_projects/master_manager/sources/__pycache__
+old_datas/__pycache__/authorized.cpython-38.pyc
+old_datas/__pycache__/keys.cpython-38.pyc
+old_datas/__pycache__/paths.cpython-38.pyc
+old_modules/encryption/my_encrpyt.py
