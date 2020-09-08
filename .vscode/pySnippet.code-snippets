@@ -15,6 +15,15 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"import/": {
+		"prefix": [
+			"i"
+		],
+		"body": [
+			"import "
+		],
+		"description": "import/"
+	},
 	"if/": {
 		"prefix": [
 			"if"
