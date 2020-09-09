@@ -1,4 +1,5 @@
-import tools.file_explorer as fe
+from system_tools.file_explorer import list_files
+from python_tools.convert import to_list
 
 import sys, os
 
@@ -14,7 +15,7 @@ def print_files(path):
     Function Return : 
     None : None
     """
-    res = fe.list_files(path)
+    res = list_files(path)
     for line in res:
         print(line)
     print("-" * 20)
@@ -28,10 +29,7 @@ if __name__ == "__main__":
         paths = args[1:]
 
     ### if not a list, transform to list
-    if not isinstance(paths, list):
-        t_path = paths
-        paths = []
-        paths.append(t_path)
+    paths = to_list(paths)
 
     ### for each path prints the files
     for path in paths:
