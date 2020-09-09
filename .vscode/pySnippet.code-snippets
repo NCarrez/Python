@@ -76,22 +76,34 @@
 		],
 		"description": "for/len"
 	},
-	"comment/code": {
+	"comment/multilines": {
 		"prefix": [
 			"\"\"\"",
-			"'''"
+			"'''",
+			"comment"
 		],
 		"body": [
 			"'''",
-			"",
+			"Comments",
 			"'''"
+		],
+		"description": "comment/multilines"
+	},
+	"comment/code": {
+		"prefix": [
+			"#",
+			"comment"
+		],
+		"body": [
+			"### Comments"
 		],
 		"description": "comment/code"
 	},
 	"comment/function": {
 		"prefix": [
 			"\"\"\"",
-			"'''"
+			"'''",
+			"comment"
 		],
 		"body": [
 			"'''",
