@@ -22,7 +22,7 @@ if __name__ == "__main__":
             print("which path to save ?")
             for i in range(len(res)):
                 print("(" + str(i) + ") - " + res[i])
-            index = int(input())
+            index = int(input(">"))
             if index < 0 or index > (len(res) - 1):
                 print()
                 print("PLEASE SELECT A VALUE IN THE AVAILABLE RANGE")
