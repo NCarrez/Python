@@ -1,7 +1,6 @@
 @echo off
-echo (where python)
-FOR /f %%p in ('where python') do SET PYTHONPATH=%%p
-ECHO %PYTHONPATH%
 
-set path_to_use=%1
-echo %path_to_use%
+set this_file_path=%~dp0 
+set this_file_path=%this_file_path: =%
+echo.
+python "%this_file_path%_listfiles.py" %*
