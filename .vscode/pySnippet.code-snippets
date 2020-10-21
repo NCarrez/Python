@@ -15,6 +15,28 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"header/": {
+		"prefix": [
+			"header"
+		],
+		"body": [
+			"### ----------------------------------------------------------------------------------------",
+			"### FILE CREATED AND OWNED BY NICOLAS CARREZ",
+			"### Publishing this file under any other name is forbidden",
+			"### Publishing this file without agreement is forbidden",
+			"### Publishing a copy of the file or code without mentioning the initial author is forbidden",
+			"### For more informations please contact n.carrez.code@gmail.com",
+			"### ----------------------------------------------------------------------------------------",
+			"import os, sys",
+			"",
+			"file_path = os.path.dirname(os.path.abspath(__file__))",
+			"if not (file_path in sys.path):",
+			"\tsys.path.append(file_path)",
+			"",
+			""
+		],
+		"description": "header/"
+	},
 	"import/": {
 		"prefix": [
 			"i"
