@@ -1,10 +1,9 @@
-### ----------------------------------------------------------------------------------------
+### --------------------------------------------------------------
 ### FILE CREATED AND OWNED BY NICOLAS CARREZ
-### Publishing this file under any other name is forbidden
-### Publishing this file without agreement is forbidden
-### Publishing a copy of the file or code without mentioning the initial author is forbidden
+### Publishing this file or code under any other name is forbidden
+### Publishing this file or code without agreement is forbidden
 ### For more informations please contact n.carrez.code@gmail.com
-### ----------------------------------------------------------------------------------------
+### --------------------------------------------------------------
 import os, sys
 
 file_path = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +18,7 @@ import tkinter
 class pack_type():
     PACK = 0
     GRID = 1
-    
+
 def __pack_widget__(widget_to_pack, p_dict=None):
     p_type = p_dict.get('type',None)
     del p_dict['type']
