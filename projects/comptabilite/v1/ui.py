@@ -19,21 +19,14 @@ import tkinter
 class pack_type():
     PACK = 0
     GRID = 1
+    
 def __pack_widget__(widget_to_pack, p_dict=None):
     p_type = p_dict.get('type',None)
+    del p_dict['type']
     if(p_type == pack_type.PACK):
-        return widget_to_pack.pack(
-            fill  =p_dict.get('fill',None)          if p_dict != None else None, 
-            expand=p_dict.get('expand',None)        if p_dict != None else None, 
-            side  =p_dict.get('side',None)          if p_dict != None else None
-            )
+        return widget_to_pack.pack(**p_dict)
     elif(p_type == pack_type.GRID):
-        return widget_to_pack.grid(
-            row        =p_dict.get('row',None)      if p_dict != None else None, 
-            column     =p_dict.get('column',None)   if p_dict != None else None, 
-            rowspan    =p_dict.get('rowspan',None)  if p_dict != None else None, 
-            columnspan =p_dict.get('colspan',None)  if p_dict != None else None
-            )
+        return widget_to_pack.grid(**p_dict)
     pass
 
 #--Building tkinter widgets
@@ -49,31 +42,14 @@ def __build_widget__(w_dict=None):
     w_type = w_dict.get('type',None)
     del w_dict['type']
     if(w_type   == widget_type.LABEL):
-        return __build_label__(w_dict)
+        return tkinter.Label(**w_dict)
     elif(w_type == widget_type.ENTRY):
-        return __build_entry__(w_dict)
+        return tkinter.Entry(**w_dict)
     elif(w_type == widget_type.BUTTON):
-        return __build_button__(w_dict)
+        return tkinter.Button(**w_dict)
     elif(w_type == widget_type.SPINBOX):
-        return __build_spinbox__(w_dict)
+        return tkinter.Spinbox(**w_dict)
     pass
-
-def __build_label__(w_dict=None):
-    return tkinter.Label(**w_dict)  
-    pass
-
-def __build_entry__(w_dict=None):
-    return tkinter.Entry(**w_dict)
-    pass
-
-def __build_button__(w_dict=None):
-    return tkinter.Button(**w_dict)
-    pass
-
-def __build_spinbox__(w_dict=None):
-    return tkinter.Spinbox(**w_dict)
-    pass
-    
     
 def _add_widget_(widget_dict=None, pack_dict=None):
     return __pack_widget__(
